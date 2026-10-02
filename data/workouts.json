@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "วิ่ง",
+    "type": "Cardio",
+    "duration": 30,
+    "calories": 250,
+    "date": "2026-10-01"
+  },
+  {
+    "id": 3,
+    "name": "ยกน้ำหนัก",
+    "type": "Strength",
+    "duration": 40,
+    "calories": 220,
+    "date": "2026-10-05"
+  },
+  {
+    "id": 4,
+    "name": "วิ่ง",
+    "type": "Cardio",
+    "duration": 30,
+    "calories": 4550,
+    "date": "2026-10-01"
+  },
+  {
+    "id": 5,
+    "name": "playing pootball",
+    "type": "Flexibility",
+    "duration": 180,
+    "calories": 4000,
+    "date": "2026-10-17"
+  },
+  {
+    "id": 6,
+    "name": "ตีแบต",
+    "type": "Flexibility",
+    "duration": 40,
+    "calories": 480,
+    "date": "2026-10-18"
+  }
+]

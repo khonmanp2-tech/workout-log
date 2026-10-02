@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Workout Log</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- =====================
+             HEADER
+        ====================== -->
+
+        <header class="header">
+
+            <div class="logo">
+                🏋️
+            </div>
+
+            <h1>
+                Workout Log
+            </h1>
+
+            <p>
+                ระบบบันทึกการออกกำลังกาย
+            </p>
+
+        </header>
+
+
+
+        <!-- =====================
+             FORM
+        ====================== -->
+
+        <section class="card">
+
+            <h2>
+                ➕ เพิ่มการออกกำลังกาย
+            </h2>
+
+
+            <form
+                id="workoutForm"
+            >
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ชื่อการออกกำลังกาย
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="เช่น วิ่ง"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ประเภท
+                        </label>
+
+                        <select
+                            id="type"
+                            required
+                        >
+
+                            <option value="">
+                                เลือกประเภท
+                            </option>
+
+                            <option value="Cardio">
+                                Cardio
+                            </option>
+
+                            <option value="Strength">
+                                Strength
+                            </option>
+
+                            <option value="Flexibility">
+                                Flexibility
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ระยะเวลา (นาที)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="duration"
+                            min="1"
+                            placeholder="30"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            แคลอรี (kcal)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="calories"
+                            min="0"
+                            placeholder="250"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            วันที่
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="add-button"
+                >
+                    + บันทึกการออกกำลังกาย
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =====================
+             CALENDAR
+        ====================== -->
+
+        <section class="card">
+
+            <div class="calendar-header">
+
+                <button
+                    id="prevMonth"
+                    class="month-button"
+                >
+                    ‹
+                </button>
+
+
+                <div>
+
+                    <h2
+                        id="calendarTitle"
+                    >
+                        ปฏิทิน
+                    </h2>
+
+                    <p class="calendar-subtitle">
+                        รายการออกกำลังกายทั้งหมด
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="nextMonth"
+                    class="month-button"
+                >
+                    ›
+                </button>
+
+            </div>
+
+
+
+            <div class="calendar-week">
+
+                <div>อา</div>
+                <div>จ</div>
+                <div>อ</div>
+                <div>พ</div>
+                <div>พฤ</div>
+                <div>ศ</div>
+                <div>ส</div>
+
+            </div>
+
+
+            <div
+                id="calendar"
+                class="calendar-grid"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- =====================
+             FILTER
+        ====================== -->
+
+        <section class="filter-box">
+
+            <div>
+
+                <h2>
+                    📋 รายการบันทึก
+                </h2>
+
+                <p>
+                    รายการออกกำลังกายทั้งหมด
+                </p>
+
+            </div>
+
+
+            <select
+                id="filterType"
+            >
+
+                <option value="">
+                    แสดงทั้งหมด
+                </option>
+
+                <option value="Cardio">
+                    Cardio
+                </option>
+
+                <option value="Strength">
+                    Strength
+                </option>
+
+                <option value="Flexibility">
+                    Flexibility
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- =====================
+             WORKOUT LIST
+        ====================== -->
+
+        <section
+            id="workoutList"
+            class="workout-list"
+        ></section>
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
